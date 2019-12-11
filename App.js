@@ -6,7 +6,7 @@ export default class App extends Component {
   static navigationOptions = ({ navigation }) => {
     return {
       title: "FunDoo",
-      headerStyle: { backgroundColor: "white" },
+      headerStyle: { backgroundColor: "red" },
       headerTitleStyle: { textAlign: "left", flex: 1 }
     };
   };
@@ -38,13 +38,13 @@ export default class App extends Component {
     return (
       <KeyboardAvoidingView style={styles.innerView}>
         <ScrollView style={{ width: '100%', height: '100%' }} >
+          
 
           <View ref="rootView" style={[styles.container, { backgroundColor: (this.state.orientation == 'portrait') ? '#1B5E20' : '#006064' }]}>
             <Text style={styles.loginText}>{this.state.orientation.toUpperCase()} VIEW</Text>
           </View>
-
+          
           <View style={{ flexDirection: 'row',flexWrap:"wrap",justifyContent:'center',alignItems:'center' }}>
-
             <View style={{ justifyContent: 'center', alignItems: 'center' }}>
               <Image source={require('/Users/admin/Documents/ScreenOrientation/login.png')}
                 style={{ width: 200, height: 200,margin:40 }} />
